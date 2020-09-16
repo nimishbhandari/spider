@@ -1,12 +1,3 @@
-/*  ---------------------------------------------------
-  Template Name: DJoz
-  Description:  DJoz Music HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
@@ -34,7 +25,7 @@
         prependTo: '#mobile-menu-wrap',
         allowParentLinks: true
     });
-    
+
     /*--------------------------
         Event Slider
     ----------------------------*/
@@ -44,7 +35,7 @@
         items: 3,
         dots: false,
         nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -60,7 +51,7 @@
             },
         }
     });
-    
+
     /*--------------------------
         Videos Slider
     ----------------------------*/
@@ -70,7 +61,7 @@
         items: 4,
         dots: false,
         nav: true,
-        navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -106,7 +97,7 @@
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
 
-    if(mm == 12) {
+    if (mm == 12) {
         mm = '01';
         yyyy = yyyy + 1;
     } else {
@@ -114,19 +105,12 @@
         mm = String(mm).padStart(2, '0');
     }
     var timerdate = mm + '/' + dd + '/' + yyyy;
-    // For demo preview end
-    
 
-    // Use this for real timer date
-    /* var timerdate = "2020/01/01"; */
-
-	$("#countdown-time").countdown(timerdate, function(event) {
+    $("#countdown-time").countdown(timerdate, function (event) {
         $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Days</p> </div>" + "<div class='countdown__item'><span>%H</span> <p>Hours</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Minutes</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Seconds</p> </div>"));
     });
 
-    /*------------------
-		Barfiller
-	--------------------*/
+
     $('#bar1').barfiller({
         barColor: "#ffffff",
     });
@@ -139,9 +123,7 @@
         barColor: "#ffffff",
     });
 
-    /*-------------------
-		Nice Scroll
-	--------------------- */
+
     $(".nice-scroll").niceScroll({
         cursorcolor: "#111111",
         cursorwidth: "5px",
